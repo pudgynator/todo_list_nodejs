@@ -3,9 +3,12 @@ let app = express();
 app.set("view engine", "ejs");
 app.get('/', function (req, res) {
     res.render("index");
-    
 });
 
+app.post('/addnewtask', function (req, res) {
+    res.render('index')
+});
+  
 app.listen(3000, function() {
     console.log("Сервер працює на порту 3000!");
 });
